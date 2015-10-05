@@ -2,7 +2,7 @@
     $getallen = array(1,2,3,4,5);
     $optelling = 0;
     $onevengetallen = "";
-    $opgetelde = "";
+    $opgetelde = array();
     for($i=0; count($getallen) > $i; $i++){
         $optelling += $getallen[$i];
     }
@@ -14,8 +14,8 @@
     }
     $omgedraaidegetallen = array_reverse($getallen);
     
-    for($i; count($getallen) > $i; $i++){
-        $opgetelde .= ($getallen + $omgedraaidegetallen) . " ";
+    for($j=0; count($getallen) > $j; $j++){
+        $opgetelde[$j] = ($getallen[$j] + $omgedraaidegetallen[$j]);
     }
     
 ?>
