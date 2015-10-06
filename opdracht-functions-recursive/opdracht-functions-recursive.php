@@ -5,7 +5,8 @@
     $jaar = 8;
     function renteBerekenen($bedrag){
         global $looptijd, $rentevoet, $jaar;
-        if($jaar < $looptijd){
+        
+        if($jaar >= $looptijd){
             $renteBedrag = $bedrag *($rentevoet/100);
             $bedrag = $bedrag + $renteBedrag;
             $looptijd++;
